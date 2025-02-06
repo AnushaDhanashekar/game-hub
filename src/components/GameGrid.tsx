@@ -3,16 +3,6 @@ import useGames from "../hooks/useGames";
 import { px } from "framer-motion";
 import GameCard from "./GameCard";
 
-interface Game {
-  id: number;
-  name: string;
-}
-
-interface FetchGamesResponse {
-  count: number;
-  results: Game[];
-}
-
 const GameGrid = () => {
   const { games, error } = useGames();
   return (
