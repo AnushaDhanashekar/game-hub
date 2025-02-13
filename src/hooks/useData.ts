@@ -20,8 +20,8 @@ useEffect(() => {
   apiClient
     .get<FetchResponse<T>>(endpoint, {signal:controller.signal})
     .then((res) => {
-      setLoading(false);
       setData(res.data.results);
+      setLoading(false);
     })
     .catch((err) => {
       setLoading(false);
